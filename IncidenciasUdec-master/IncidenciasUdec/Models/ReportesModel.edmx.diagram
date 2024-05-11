@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0017dcfdb10e4555bf0f9d750b8c5086" Name="Diagram1">
+        <EntityTypeShape EntityType="ReporteModel.CLASIFICACION" Width="1.5" PointX="3" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ReporteModel.ESTADO" Width="1.5" PointX="3" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ReporteModel.PROGRAMA" Width="1.5" PointX="0.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ReporteModel.REPORTE" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ReporteModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ReporteModel.TIPO_DAÑO" Width="1.5" PointX="3" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ReporteModel.UBICACION" Width="1.5" PointX="3" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ReporteModel.USUARIO" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <AssociationConnector Association="ReporteModel.FK_REPORTE_CLASIFICACION" ManuallyRouted="false" />
+        <AssociationConnector Association="ReporteModel.FK_REPORTE_ESTADO" ManuallyRouted="false" />
+        <AssociationConnector Association="ReporteModel.FK_PROGRAMA_USUARIO" ManuallyRouted="false" />
+        <AssociationConnector Association="ReporteModel.FK_REPORTE_TIPO_DAÑO" ManuallyRouted="false" />
+        <AssociationConnector Association="ReporteModel.FK_REPORTE_UBICACION" ManuallyRouted="false" />
+        <AssociationConnector Association="ReporteModel.FK_REPORTE_USUARIO" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

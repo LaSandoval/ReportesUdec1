@@ -1,0 +1,111 @@
+﻿@model IEnumerable<IncidenciasUdec.Models.REPORTE>
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Seguimiento de Reporte UDEC</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif; /* Letra bonita */
+        }
+
+        /* Estilo para el título */
+        .titulo {
+            background-color: green; /* Color de fondo verde */
+            color: white; /* Color de texto blanco */
+            padding: 10px; /* Espaciado interno */
+            border-radius: 10px; /* Bordes redondeados */
+            text-align: center; /* Centrar texto */
+            margin-bottom: 20px; /* Espacio inferior */
+        }
+
+        table {
+            width: 100%; /* Ancho de la tabla */
+            border-collapse: collapse; /* Colapsar bordes de celda */
+        }
+
+        th, td {
+            padding: 10px; /* Espaciado interno de las celdas */
+            border: 2px solid green; /* Borde verde */
+            text-align: center; /* Centrar contenido */
+        }
+
+        th {
+            background-color: lightgreen; /* Color de fondo para las cabeceras */
+            color: white; /* Color de texto para las cabeceras */
+        }
+
+        td a {
+            color: blue; /* Color de enlaces */
+            text-decoration: none; /* Quitar subrayado */
+        }
+
+            td a:hover {
+                text-decoration: underline; /* Subrayado al pasar el ratón sobre enlaces */
+            }
+    </style>
+</head>
+<body>
+    <!-- Título -->
+    <div class="titulo">
+        <h1>Seguimiento de Reporte UDEC</h1>
+    </div>
+
+    <table class="table">
+        <tr>
+            <th>
+                NOMBRE
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UBICACION)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TIPO_DAÑO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DESCRIPCION)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLASIFICACION)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IMAGEN)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NOMBRE)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UBICACION.NOMBRE)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TIPO_DAÑO.NOMBRE)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DESCRIPCION)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CLASIFICACION.NOMBRE)
+                </td>
+                <td>
+                    <a href="@item.IMAGEN" target="_blank">Ver imagen</a>
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                </td>
+            </tr>
+        }
+
+    </table>
+</body>
+</html>
